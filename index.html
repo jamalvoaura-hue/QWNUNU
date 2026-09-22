@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="خدمات عزل الأسطح والخزانات بالرياض — حماية من الحرارة والتسربات بجودة احترافية." />
+  <meta name="theme-color" content="#0a7771" />
+  <title>عزل أسطح وخزانات بالرياض | حماية تدوم</title>
+  <style>
+    :root {
+      --ink: #15333a;
+      --muted: #62777a;
+      --teal: #0a7771;
+      --teal-dark: #07534f;
+      --mint: #dff5ee;
+      --sand: #f5efe5;
+      --cream: #fffdf9;
+      --orange: #ee8a4b;
+      --line: #dce8e4;
+      --shadow: 0 22px 65px rgba(19, 63, 63, 0.12);
+      --radius: 24px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: Tahoma, Arial, sans-serif;
+      line-height: 1.8;
+      overflow-x: hidden;
+    }
+    a { color: inherit; text-decoration: none; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    .container { width: min(1120px, calc(100% - 40px)); margin-inline: auto; }
+
+    .topbar {
+      background: var(--teal-dark);
+      color: #eafaf4;
+      font-size: 13px;
+      padding: 8px 0;
+    }
+    .topbar-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+    }
+    .topbar a { color: #fff; font-weight: 700; }
+    .topbar-note { opacity: .85; }
+
+    header {
+      position: relative;
+      z-index: 4;
+      background: rgba(255,253,249,.9);
+      border-bottom: 1px solid rgba(220,232,228,.8);
+      backdrop-filter: blur(12px);
+    }
+    .nav {
+      min-height: 77px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+    }
+    .brand { display: inline-flex; align-items: center; gap: 11px; font-weight: 900; }
+    .brand-mark {
+      width: 43px; height: 43px; border-radius: 14px;
+      display: grid; place-items: center;
+      color: #fff; background: var(--teal);
+      box-shadow: 0 10px 22px rgba(10,119,113,.22);
+    }
+    .brand-mark svg { width: 25px; height: 25px; }
+    .brand-text { display: grid; line-height: 1.2; }
+    .brand-text strong { font-size: 16px; }
+    .brand-text small { color: var(--muted); font-size: 11px; font-weight: 600; margin-top: 4px; }
+    .nav-links { display: flex; align-items: center; gap: 26px; color: #527074; font-size: 14px; font-weight: 700; }
+    .nav-links a:hover { color: var(--teal); }
+    .nav-cta {
+      border: 1px solid var(--teal);
+      color: var(--teal);
+      padding: 8px 16px;
+      border-radius: 99px;
+      font-size: 13px;
+      font-weight: 800;
+    }
+    .nav-cta:hover { background: var(--teal); color: #fff; }
+
+    .hero {
+      position: relative;
+      min-height: 655px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 77% 15%, rgba(209,244,234,.9) 0, rgba(209,244,234,0) 28%),
+        linear-gradient(118deg, #fffdf9 0%, #f2fbf7 100%);
+    }
+    .hero:after {
+      content: "";
+      position: absolute; left: -8%; bottom: -115px;
+      width: 55%; height: 255px;
+      background: #e8f6f0;
+      border-radius: 50%;
+      transform: rotate(-8deg);
+    }
+    .hero-grid {
+      position: relative; z-index: 1;
+      display: grid; grid-template-columns: 1.02fr .98fr;
+      gap: 56px; align-items: center;
+      padding: 72px 0 90px;
+    }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      color: var(--teal); font-size: 13px; font-weight: 900;
+      letter-spacing: .1px; margin-bottom: 17px;
+    }
+    .eyebrow:before { content: ""; width: 27px; height: 3px; border-radius: 4px; background: var(--orange); }
+    h1 { max-width: 610px; font-size: clamp(36px, 5vw, 67px); line-height: 1.14; letter-spacing: -1.5px; margin-bottom: 22px; }
+    h1 em { color: var(--teal); font-style: normal; }
+    .hero-copy { max-width: 560px; color: var(--muted); font-size: 17px; margin-bottom: 31px; }
+    .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 9px;
+      min-height: 50px; padding: 12px 21px; border-radius: 13px;
+      font-size: 14px; font-weight: 900; transition: .2s ease;
+    }
+    .btn-primary { color: #fff; background: var(--teal); box-shadow: 0 13px 25px rgba(10,119,113,.2); }
+    .btn-primary:hover { background: var(--teal-dark); transform: translateY(-2px); }
+    .btn-light { border: 1px solid var(--line); background: #fff; color: var(--ink); }
+    .btn-light:hover { border-color: var(--teal); color: var(--teal); transform: translateY(-2px); }
+    .btn svg { width: 19px; height: 19px; }
+    .hero-proof { display: flex; align-items: center; gap: 13px; margin-top: 34px; color: var(--muted); font-size: 12px; }
+    .proof-dots { display: flex; direction: ltr; }
+    .proof-dots span { display: grid; place-items: center; width: 31px; height: 31px; border: 3px solid var(--cream); margin-left: -8px; border-radius: 50%; color: #fff; background: var(--teal); font-size: 10px; font-weight: bold; }
+    .proof-dots span:nth-child(2) { background: #87b9a9; }
+    .proof-dots span:nth-child(3) { background: var(--orange); }
+    .proof-dots span:nth-child(4) { background: var(--ink); }
+    .proof-dots span:first-child { margin-left: 0; }
+
+    .visual { position: relative; min-height: 455px; }
+    .visual-card {
+      position: absolute; inset: 15px 10px 0 15px;
+      border-radius: 34px; overflow: hidden;
+      background: linear-gradient(145deg, #0e827a, #064f50);
+      box-shadow: var(--shadow);
+    }
+    .visual-card:before, .visual-card:after { content: ""; position: absolute; border: 1px solid rgba(255,255,255,.16); border-radius: 50%; }
+    .visual-card:before { width: 430px; height: 430px; top: -170px; left: -90px; }
+    .visual-card:after { width: 340px; height: 340px; bottom: -145px; right: -55px; }
+    .sun { position: absolute; width: 74px; height: 74px; top: 48px; left: 57px; border-radius: 50%; background: #f8c27d; box-shadow: 0 0 0 14px rgba(248,194,125,.14); }
+    .roof-shape { position: absolute; height: 142px; width: 110%; bottom: 36px; right: -4%; background: #e9c9a8; transform: skewY(-13deg); box-shadow: 0 -18px 0 #d9af8d; }
+    .roof-lines { position: absolute; height: 140px; width: 100%; bottom: 35px; right: 0; opacity: .3; background: repeating-linear-gradient(90deg, transparent 0 34px, #865f48 35px 37px); transform: skewY(-13deg); }
+    .tank { position: absolute; z-index: 1; right: 17%; bottom: 126px; width: 115px; height: 123px; border-radius: 27px 27px 18px 18px; background: linear-gradient(90deg, #d9eee8, #fff 50%, #b7d9d0); box-shadow: 13px 18px 0 rgba(4,73,71,.15); }
+    .tank:before { content: ""; position: absolute; top: -18px; left: 12px; width: 91px; height: 30px; border-radius: 50%; background: #e9f8f2; border: 6px solid #b4d7ce; }
+    .tank:after { content: "ماء"; position: absolute; top: 47px; right: 19px; color: var(--teal); font-size: 17px; font-weight: 900; }
+    .drop { position: absolute; z-index: 2; top: 102px; right: 29%; width: 24px; height: 32px; border-radius: 70% 28% 70% 70%; background: #b5eddf; transform: rotate(45deg); }
+    .visual-label {
+      position: absolute; z-index: 3; bottom: 20px; right: 20px; left: 20px;
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
+      border: 1px solid rgba(255,255,255,.18); border-radius: 17px;
+      padding: 12px 14px; color: #fff; background: rgba(5,67,66,.55); backdrop-filter: blur(8px);
+    }
+    .visual-label strong { display: block; font-size: 14px; }
+    .visual-label small { display: block; color: #b9e7dc; font-size: 11px; }
+    .shield { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 12px; background: #bcebdd; color: var(--teal-dark); }
+    .shield svg { width: 22px; }
+    .floating-tag { position: absolute; z-index: 4; top: 48px; right: -16px; display: flex; align-items: center; gap: 10px; padding: 11px 15px; border-radius: 15px; color: var(--ink); background: #fff; box-shadow: 0 13px 30px rgba(27,69,65,.17); font-size: 12px; font-weight: 900; }
+    .floating-tag b { color: var(--orange); font-size: 19px; }
+
+    .stats { position: relative; z-index: 2; margin-top: -45px; }
+    .stats-card { display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid var(--line); border-radius: 20px; background: #fff; box-shadow: 0 12px 40px rgba(26,76,68,.08); overflow: hidden; }
+    .stat { padding: 23px 24px; text-align: center; border-left: 1px solid var(--line); }
+    .stat:last-child { border-left: 0; }
+    .stat strong { display: block; color: var(--teal); font-size: 25px; line-height: 1.2; }
+    .stat span { color: var(--muted); font-size: 12px; }
+
+    section { padding: 105px 0; }
+    .section-head { max-width: 650px; margin-bottom: 42px; }
+    .section-head.center { margin-inline: auto; text-align: center; }
+    .section-kicker { display: block; color: var(--orange); font-size: 12px; font-weight: 900; margin-bottom: 9px; }
+    h2 { font-size: clamp(28px, 3.5vw, 44px); line-height: 1.25; letter-spacing: -.8px; margin-bottom: 12px; }
+    .section-head p { color: var(--muted); font-size: 15px; }
+
+    .services { background: #f7fbf8; }
+    .service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 17px; }
+    .service-card { position: relative; min-height: 250px; padding: 27px; border: 1px solid var(--line); border-radius: var(--radius); background: #fff; transition: .25s ease; }
+    .service-card:hover { transform: translateY(-6px); box-shadow: 0 17px 38px rgba(22,85,74,.1); border-color: #b8dfd3; }
+    .service-icon { display: grid; place-items: center; width: 52px; height: 52px; margin-bottom: 22px; border-radius: 16px; color: var(--teal); background: var(--mint); }
+    .service-icon svg { width: 28px; height: 28px; }
+    .service-card h3 { font-size: 19px; margin-bottom: 7px; }
+    .service-card p { color: var(--muted); font-size: 13px; line-height: 1.9; }
+    .service-number { position: absolute; top: 25px; left: 25px; color: #d6eae3; font-size: 25px; font-weight: 900; }
+
+    .why-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 65px; align-items: center; }
+    .why-visual { min-height: 350px; position: relative; border-radius: 32px; overflow: hidden; background: var(--sand); }
+    .why-visual:before { content: ""; position: absolute; width: 300px; height: 300px; right: -75px; top: -70px; border: 35px solid rgba(238,138,75,.22); border-radius: 50%; }
+    .why-visual:after { content: "حماية"; position: absolute; left: 28px; bottom: 20px; color: #e7c39f; font-size: 90px; font-weight: 900; opacity: .45; }
+    .insulation-art { position: absolute; inset: 47px; border: 12px solid #d7b48f; border-radius: 22px; background: linear-gradient(145deg, #fff 20%, #ddf4eb 20% 31%, #fff 31% 41%, #ddf4eb 41% 52%, #fff 52%); box-shadow: 0 20px 28px rgba(104,79,55,.12); }
+    .insulation-art:before { content: "✓"; position: absolute; display: grid; place-items: center; width: 75px; height: 75px; top: 50%; left: 50%; transform: translate(-50%,-50%); border-radius: 50%; color: #fff; background: var(--teal); font-size: 40px; font-weight: 400; box-shadow: 0 0 0 12px rgba(10,119,113,.12); }
+    .why-list { display: grid; gap: 23px; }
+    .why-item { display: flex; align-items: flex-start; gap: 15px; }
+    .check { flex: 0 0 34px; display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; color: var(--teal); background: var(--mint); font-weight: 900; }
+    .why-item h3 { font-size: 17px; margin-bottom: 3px; }
+    .why-item p { color: var(--muted); font-size: 13px; }
+
+    .steps { background: var(--teal-dark); color: #fff; }
+    .steps .section-kicker { color: #f7b783; }
+    .steps .section-head p { color: #b9d8d0; }
+    .step-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 17px; }
+    .step { position: relative; padding: 27px; border: 1px solid rgba(255,255,255,.14); border-radius: 21px; background: rgba(255,255,255,.06); }
+    .step:after { content: ""; position: absolute; top: 49px; left: -29px; width: 30px; border-top: 1px dashed rgba(255,255,255,.3); }
+    .step:last-child:after { display: none; }
+    .step-no { display: grid; place-items: center; width: 44px; height: 44px; margin-bottom: 19px; border-radius: 13px; color: var(--teal-dark); background: #d7f2e8; font-size: 18px; font-weight: 900; }
+    .step h3 { font-size: 18px; margin-bottom: 7px; }
+    .step p { color: #b9d8d0; font-size: 13px; line-height: 1.9; }
+
+    .faq-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 65px; align-items: start; }
+    .faq-note { padding: 25px; border-radius: 20px; background: var(--mint); }
+    .faq-note strong { display: block; font-size: 18px; margin-bottom: 7px; }
+    .faq-note p { color: #4f7470; font-size: 13px; margin-bottom: 16px; }
+    .faq-note a { color: var(--teal); font-size: 13px; font-weight: 900; }
+    .faq-list { display: grid; gap: 11px; }
+    details { border-bottom: 1px solid var(--line); padding: 0 0 13px; }
+    details summary { cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 12px 0; font-size: 15px; font-weight: 800; }
+    details summary::-webkit-details-marker { display: none; }
+    details summary:after { content: "+"; color: var(--teal); font-size: 22px; font-weight: 400; }
+    details[open] summary:after { content: "−"; }
+    details p { color: var(--muted); font-size: 13px; padding: 0 0 12px; }
+
+    .cta { padding: 80px 0; }
+    .cta-box { position: relative; overflow: hidden; display: flex; align-items: center; justify-content: space-between; gap: 30px; padding: 47px 53px; border-radius: 28px; color: #fff; background: linear-gradient(120deg, var(--teal), #064f50); }
+    .cta-box:after { content: ""; position: absolute; width: 260px; height: 260px; left: -65px; top: -150px; border: 1px solid rgba(255,255,255,.2); border-radius: 50%; box-shadow: 0 0 0 28px rgba(255,255,255,.04), 0 0 0 56px rgba(255,255,255,.04); }
+    .cta-content { position: relative; z-index: 1; }
+    .cta-content h2 { margin-bottom: 7px; }
+    .cta-content p { color: #c2e0d7; font-size: 14px; }
+    .cta .btn-light { position: relative; z-index: 1; border: 0; color: var(--teal-dark); background: #e5f7ef; white-space: nowrap; }
+
+    footer { border-top: 1px solid var(--line); padding: 26px 0 31px; color: var(--muted); font-size: 12px; }
+    .footer-row { display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+    .credit a { color: var(--teal); font-weight: 900; }
+    .footer-contact { display: flex; align-items: center; gap: 15px; }
+    .footer-contact a:hover, .credit a:hover { text-decoration: underline; }
+
+    .whatsapp-float {
+      position: fixed; z-index: 20; right: 23px; bottom: 23px;
+      display: grid; place-items: center; width: 70px; height: 70px;
+      border: 4px solid #fff; border-radius: 50%; color: #fff;
+      background: #25d366; box-shadow: 0 12px 28px rgba(25,143,73,.35);
+      transition: .22s ease;
+    }
+    .whatsapp-float:hover { transform: scale(1.08) translateY(-3px); background: #1fbd5b; }
+    .whatsapp-float svg { width: 38px; height: 38px; }
+    .whatsapp-label { position: absolute; right: 79px; white-space: nowrap; padding: 7px 11px; border-radius: 8px; color: #31524e; background: #fff; box-shadow: 0 7px 20px rgba(0,0,0,.1); font-size: 11px; font-weight: 800; opacity: 0; transform: translateX(7px); transition: .2s; pointer-events: none; }
+    .whatsapp-float:hover .whatsapp-label { opacity: 1; transform: translateX(0); }
+
+    @media (max-width: 850px) {
+      .nav-links { display: none; }
+      .hero-grid, .why-grid, .faq-grid { grid-template-columns: 1fr; gap: 42px; }
+      .hero { min-height: auto; }
+      .hero-grid { padding-top: 57px; }
+      .visual { min-height: 390px; max-width: 600px; width: 100%; margin-inline: auto; }
+      .why-visual { max-width: 540px; }
+      .service-grid { grid-template-columns: repeat(2, 1fr); }
+      .faq-grid { gap: 35px; }
+      .cta-box { padding: 38px 30px; }
+    }
+    @media (max-width: 560px) {
+      .container { width: min(100% - 28px, 1120px); }
+      .topbar-note { display: none; }
+      .topbar-inner { justify-content: center; }
+      .nav { min-height: 68px; }
+      .nav-cta { padding: 7px 11px; font-size: 11px; }
+      .brand-text small { font-size: 10px; }
+      h1 { font-size: 38px; letter-spacing: -1px; }
+      .hero-copy { font-size: 15px; }
+      .hero-actions { align-items: stretch; flex-direction: column; }
+      .hero-actions .btn { width: 100%; }
+      .hero-proof { margin-top: 25px; }
+      .visual { min-height: 325px; }
+      .visual-card { inset: 8px 0 0; border-radius: 25px; }
+      .floating-tag { right: -4px; top: 25px; }
+      .stats { margin-top: -25px; }
+      .stats-card { grid-template-columns: repeat(2, 1fr); }
+      .stat { padding: 17px 8px; border-bottom: 1px solid var(--line); }
+      .stat:nth-child(2) { border-left: 0; }
+      .stat:nth-child(3), .stat:nth-child(4) { border-bottom: 0; }
+      section { padding: 75px 0; }
+      .service-grid, .step-grid { grid-template-columns: 1fr; }
+      .step:after { display: none; }
+      .why-visual { min-height: 280px; }
+      .insulation-art { inset: 34px; }
+      .cta { padding: 60px 0; }
+      .cta-box { display: block; padding: 33px 25px; }
+      .cta .btn { margin-top: 24px; width: 100%; }
+      .footer-row { display: block; text-align: center; }
+      .footer-contact { justify-content: center; margin-bottom: 9px; }
+      .whatsapp-float { right: 16px; bottom: 16px; width: 62px; height: 62px; }
+      .whatsapp-float svg { width: 33px; height: 33px; }
+      .whatsapp-label { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span>خدمة احترافية داخل الرياض وضواحيها</span>
+      <span class="topbar-note">استشارة أولية وتقييم مناسب لاحتياجك</span>
+      <a href="tel:+966539575643" dir="ltr">+966 53 957 5643</a>
+    </div>
+  </div>
+
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="عزل أسطح وخزانات بالرياض">
+        <span class="brand-mark">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 11.5 12 4l9 7.5v7a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 18.5z"/>
+            <path d="M8 20v-5.5h8V20M12 8v3M10.5 9.5h3"/>
+          </svg>
+        </span>
+        <span class="brand-text"><strong>عزل الرياض</strong><small>أسطح • خزانات • حماية</small></span>
+      </a>
+      <nav class="nav-links" aria-label="التنقل الرئيسي">
+        <a href="#services">خدماتنا</a>
+        <a href="#why-us">لماذا نحن</a>
+        <a href="#steps">كيف نعمل</a>
+        <a href="#faq">الأسئلة الشائعة</a>
+      </nav>
+      <a class="nav-cta" href="tel:+966539575643">اتصل الآن</a>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">عزل موثوق لراحة تدوم</span>
+          <h1>خلّ بيتك أكثر أمانًا من <em>الحرارة والتسربات.</em></h1>
+          <p class="hero-copy">ننفّذ عزل الأسطح والخزانات في الرياض بمواد مناسبة وتشطيب دقيق، لتعيش براحة أكبر وتحافظ على منشأتك فترة أطول.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://wa.me/966539575643" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.86 11.86 0 0 0 12.07 0C5.52 0 .19 5.33.19 11.88c0 2.09.55 4.13 1.59 5.93L.08 24l6.34-1.66a11.85 11.85 0 0 0 5.65 1.43h.01c6.55 0 11.88-5.33 11.88-11.88 0-3.18-1.24-6.16-3.44-8.41ZM12.08 21.73h-.01a9.85 9.85 0 0 1-5.02-1.37l-.36-.21-3.76.99 1-3.67-.23-.38a9.87 9.87 0 0 1-1.51-5.21C2.19 6.45 6.62 2.02 12.08 2.02c2.65 0 5.14 1.03 7.01 2.91a9.85 9.85 0 0 1 2.9 7.02c0 5.46-4.44 9.88-9.91 9.88Zm5.42-7.4c-.3-.15-1.78-.88-2.05-.98-.27-.1-.47-.15-.67.15-.2.3-.77.98-.94 1.18-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.47s1.07 2.87 1.22 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.62.71.23 1.36.2 1.88.12.57-.08 1.78-.73 2.03-1.43.25-.7.25-1.3.17-1.43-.07-.12-.27-.2-.57-.35Z"/></svg>
+              تواصل عبر واتساب
+            </a>
+            <a class="btn btn-light" href="tel:+966539575643">اتصل للاستفسار</a>
+          </div>
+          <div class="hero-proof">
+            <div class="proof-dots" aria-hidden="true"><span>✓</span><span>✓</span><span>✓</span><span>+</span></div>
+            <span>حلول عملية للمنازل والمنشآت في الرياض</span>
+          </div>
+        </div>
+
+        <div class="visual" aria-label="رسم توضيحي لعزل الأسطح والخزانات">
+          <div class="visual-card">
+            <div class="sun"></div>
+            <div class="drop"></div>
+            <div class="tank"></div>
+            <div class="roof-shape"></div>
+            <div class="roof-lines"></div>
+            <div class="visual-label">
+              <div><strong>عزل يحمي استثمارك</strong><small>تنفيذ منظم ونتيجة تلاحظها</small></div>
+              <span class="shield">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 20 6v5c0 5-3.4 8.5-8 10-4.6-1.5-8-5-8-10V6z"/><path d="m8.5 12 2.2 2.2 4.8-5"/></svg>
+              </span>
+            </div>
+          </div>
+          <div class="floating-tag"><b>✓</b><span>جودة تبدأ من التفاصيل</span></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container stats">
+      <div class="stats-card">
+        <div class="stat"><strong>01</strong><span>فحص قبل التنفيذ</span></div>
+        <div class="stat"><strong>100%</strong><span>اهتمام بالتفاصيل</span></div>
+        <div class="stat"><strong>24/7</strong><span>تواصل واستفسارات</span></div>
+        <div class="stat"><strong>الرياض</strong><span>نخدمك داخل المدينة</span></div>
+      </div>
+    </div>
+
+    <section class="services" id="services">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-kicker">خدماتنا</span>
+          <h2>حل مناسب لكل نقطة تحتاج حماية</h2>
+          <p>نبدأ بفهم المشكلة ومكانها، ثم نرشّح لك الطريقة الأنسب بدل الحلول العشوائية.</p>
+        </div>
+        <div class="service-grid">
+          <article class="service-card">
+            <span class="service-number">01</span>
+            <span class="service-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m3 11 9-7 9 7"/><path d="M5 10v10h14V10M3 20h18"/><path d="M8 15h8"/></svg>
+            </span>
+            <h3>عزل الأسطح</h3>
+            <p>تقليل تأثير حرارة الشمس وحماية السطح من الرطوبة والتسربات مع تشطيب مرتب.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-number">02</span>
+            <span class="service-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14M6 8v11h12V8"/><path d="M8 5h8v3H8zM8 13h8"/></svg>
+            </span>
+            <h3>عزل الخزانات</h3>
+            <p>حماية الخزان من التسرب والعوامل الخارجية، مع عناية بالنظافة وسلامة الاستخدام.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-number">03</span>
+            <span class="service-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c3 4 6 6.9 6 10.5A6 6 0 0 1 6 13.5C6 9.9 9 7 12 3Z"/><path d="m9.5 14 1.5 1.5 3.5-3.5"/></svg>
+            </span>
+            <h3>معالجة التسربات</h3>
+            <p>تحديد مصدر المشكلة ومعالجته بخطوات واضحة قبل أن يتحول إلى ضرر أكبر.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="why-us">
+      <div class="container why-grid">
+        <div class="why-visual" aria-hidden="true"><div class="insulation-art"></div></div>
+        <div>
+          <div class="section-head">
+            <span class="section-kicker">لماذا تختارنا؟</span>
+            <h2>راحة أكثر، مصاريف مفاجئة أقل</h2>
+            <p>العزل الجيد ليس مجرد طبقة إضافية؛ هو خطوة وقائية تحافظ على المكان وتخفف آثار الظروف القاسية.</p>
+          </div>
+          <div class="why-list">
+            <div class="why-item"><span class="check">✓</span><div><h3>تقييم واضح قبل البدء</h3><p>نراجع الحالة ونشرح المطلوب لك بلغة بسيطة قبل أي تنفيذ.</p></div></div>
+            <div class="why-item"><span class="check">✓</span><div><h3>تنفيذ منظم ونظيف</h3><p>نحرص على ترتيب الموقع وتقليل الإزعاج أثناء العمل وبعده.</p></div></div>
+            <div class="why-item"><span class="check">✓</span><div><h3>حل عملي يناسب احتياجك</h3><p>نختار أسلوب العزل بحسب نوع السطح أو الخزان وحالته الفعلية.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="steps" id="steps">
+      <div class="container">
+        <div class="section-head center">
+          <span class="section-kicker">كيف نعمل؟</span>
+          <h2>ثلاث خطوات بسيطة وتبدأ الحماية</h2>
+          <p>من أول تواصل حتى اكتمال العمل، كل شيء واضح ومباشر.</p>
+        </div>
+        <div class="step-grid">
+          <article class="step"><span class="step-no">١</span><h3>تواصل معنا</h3><p>أرسل موقعك ووصفًا مختصرًا للمشكلة عبر واتساب أو الاتصال.</p></article>
+          <article class="step"><span class="step-no">٢</span><h3>معاينة وتحديد الحل</h3><p>نراجع السطح أو الخزان ونحدد طريقة التنفيذ المناسبة.</p></article>
+          <article class="step"><span class="step-no">٣</span><h3>تنفيذ باهتمام</h3><p>ننفذ العمل بترتيب ونتابع التفاصيل حتى تكون النتيجة مرضية.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="container faq-grid">
+        <div>
+          <div class="section-head">
+            <span class="section-kicker">أسئلة شائعة</span>
+            <h2>قبل أن تتواصل معنا</h2>
+            <p>إجابات سريعة على أكثر الأسئلة التي تصلنا عن العزل.</p>
+          </div>
+          <div class="faq-note">
+            <strong>ما زال عندك سؤال؟</strong>
+            <p>أرسل صورة أو اشرح الحالة، ونساعدك في معرفة الخطوة المناسبة.</p>
+            <a href="https://wa.me/966539575643" target="_blank" rel="noopener">ابدأ المحادثة ←</a>
+          </div>
+        </div>
+        <div class="faq-list">
+          <details open><summary>هل تخدمون جميع أحياء الرياض؟</summary><p>نعم، نعمل داخل الرياض وضواحيها. أرسل موقعك لتأكيد إمكانية الوصول وتحديد الموعد.</p></details>
+          <details><summary>كيف أعرف نوع العزل المناسب؟</summary><p>يُحدد ذلك بعد معرفة طبيعة المكان وسبب المشكلة وحالة السطح أو الخزان، لذلك نبدأ دائمًا بتقييم الحالة.</p></details>
+          <details><summary>هل أستطيع إرسال صور قبل المعاينة؟</summary><p>نعم، يمكنك إرسال الصور والموقع عبر واتساب لتكوين فكرة أولية عن المطلوب.</p></details>
+          <details><summary>كيف أحصل على عرض مناسب؟</summary><p>تواصل معنا على الرقم الموجود في الصفحة، وسنأخذ التفاصيل الأساسية ونوضح لك الخطوة التالية.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container">
+        <div class="cta-box">
+          <div class="cta-content"><h2>جاهز تحمي بيتك؟</h2><p>تواصل معنا الآن وخذ الخطوة الأولى نحو عزل أفضل.</p></div>
+          <a class="btn btn-light" href="https://wa.me/966539575643" target="_blank" rel="noopener">راسلنا على واتساب</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-row">
+      <div class="footer-contact"><span>عزل أسطح وخزانات بالرياض</span><a href="tel:+966539575643" dir="ltr">+966 53 957 5643</a></div>
+      <div class="credit">تم التصميم بواسطة <a href="https://wa.me/201029095046" target="_blank" rel="noopener">م. نجوى إبراهيم</a></div>
+      <span>© 2026 جميع الحقوق محفوظة</span>
+    </div>
+  </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/966539575643" target="_blank" rel="noopener" aria-label="تواصل معنا عبر واتساب">
+    <span class="whatsapp-label">تواصل معنا عبر واتساب</span>
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.86 11.86 0 0 0 12.07 0C5.52 0 .19 5.33.19 11.88c0 2.09.55 4.13 1.59 5.93L.08 24l6.34-1.66a11.85 11.85 0 0 0 5.65 1.43h.01c6.55 0 11.88-5.33 11.88-11.88 0-3.18-1.24-6.16-3.44-8.41ZM12.08 21.73h-.01a9.85 9.85 0 0 1-5.02-1.37l-.36-.21-3.76.99 1-3.67-.23-.38a9.87 9.87 0 0 1-1.51-5.21C2.19 6.45 6.62 2.02 12.08 2.02c2.65 0 5.14 1.03 7.01 2.91a9.85 9.85 0 0 1 2.9 7.02c0 5.46-4.44 9.88-9.91 9.88Zm5.42-7.4c-.3-.15-1.78-.88-2.05-.98-.27-.1-.47-.15-.67.15-.2.3-.77.98-.94 1.18-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.47s1.07 2.87 1.22 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.62.71.23 1.36.2 1.88.12.57-.08 1.78-.73 2.03-1.43.25-.7.25-1.3.17-1.43-.07-.12-.27-.2-.57-.35Z"/></svg>
+  </a>
+</body>
+</html>
